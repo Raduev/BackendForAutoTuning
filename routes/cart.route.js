@@ -5,7 +5,7 @@ const router = Router()
 
 
 router.get('/cart/:id',autMiddleware, cartController.getCart)
-router.post('/cart',autMiddleware, cartController.addCart)
+// router.post('/cart',autMiddleware, cartController.addCart)
 router.delete('/cart/:id',autMiddleware, cartController.removeCart)
 router.patch('/cart/:id',autMiddleware, cartController.patchCart)
 router.post('/cartToken',autMiddleware, cartController.cartToken)

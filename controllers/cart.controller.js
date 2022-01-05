@@ -10,6 +10,40 @@ module.exports.cartController = {
       res.json(e)
     }
   },
+
+  // addCart: async (req, res) => {
+  //   try {
+  //     await Cart.create({
+  //       user: req.body.user,
+  //       auto: req.body.auto,
+  //       service: req.body.service,
+  //       master: req.body.master
+  //     })
+  //     res.json('Корзина создана')
+  //   }
+  //   catch (e) {
+  //     res.json(e)
+  //   }
+  // },
+  removeCart: async (req, res) => {
+    const { id } = req.params
+
+    try {
+      const cart = await Cart.findById(id)
+
+      if(req.user.id !== cart.user) {
+        return res.status(401).json('Ошибка. Нет доступа')
+      }
+
+
+      if(cart.user.toString() === req.user.id) {
+        await cart.remove()
+        return res.json('Удалено')
+      }
+      return res.status(401).json('Ошибка. Нет доступа')
+    }
+    catch (e) {
+      res.status(401).json('Ошибка:' + e.toString())
   addCart: async (req,res) => {
     try {
      await  Cart.create({
@@ -23,14 +57,7 @@ module.exports.cartController = {
       res.json(e)
     }
   },
-  removeCart: async (req,res) => {
-    try {
-      await Cart.findByIdAndRemove(req.params.id)
-      res.json('Корзина удалена')
-    } catch (e) {
-      res.json(e)
-    }
-  },
+
   patchCart: async (req,res) => {
     try {
       await Cart.findByIdAndUpdate(req.params.id, {
