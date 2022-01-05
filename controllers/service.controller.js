@@ -3,10 +3,11 @@ const Service = require("../models/Service.model");
 module.exports.controllerService = {
   postService: async (req, res) => {
     try {
-      const { time, user } = req.body;
+      const { time, user, img } = req.body;
       const service = await Service.create({
         time: time,
         user: user,
+        img: img
       });
       res.json(service);
     } catch (e) {
@@ -31,10 +32,11 @@ module.exports.controllerService = {
   },
   patchService: async (req, res) => {
     try {
-      const { time, user } = req.body;
+      const { time, user, img } = req.body;
       const service = await Service.findByIdAndUpdate(req.params.id, {
         time: time,
         user: user,
+        img: img
       });
       res.json(service);
     } catch (e) {
