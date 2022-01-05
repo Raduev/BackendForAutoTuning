@@ -1,4 +1,5 @@
 const Cart = require('../models/Cart.model')
+const jwt = require('jsonwebtoken')
 module.exports.cartController = {
 
   getCart: async (req,res) => {
@@ -43,5 +44,29 @@ module.exports.cartController = {
       res.json(e)
     }
   },
+  cartToken: async (req,res) => {
+    try {
+      const {user, auto, service, master} = req.body
+
+      const {authorization} = req.headers
+
+      const [type, token] = authorization.split(' ');
+
+      if(type !== "Bearer") {
+        return res.status(400).json('Неверный тип покена')
+      }
+
+        const payload = await jwt.verify(token, process.env.SECRET_JWT_KEY)
+
+        const cart = await Cart.create({
+          user: payload.id,
+          auto,
+          service,
+          master
+        })
+      return res.json(cart)
+      } catch (e) {
+        res.status(401).json('Неверный токен')
+  }
 
 }
