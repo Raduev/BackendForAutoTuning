@@ -26,14 +26,23 @@ module.exports.cartController = {
     }
   },
   removeCart: async (req, res) => {
+    const { id } = req.params
+
     try {
-      await Cart.findByIdAndRemove(req.params.id)
-      res.json('Корзина удалена')
+
+     const cart = await Cart.findById(id)
+
+      if(cart.user.toString() === req.user.id) {
+        await cart.remove()
+        return res.json('Удалено')
+      }
+      return res.status(401).json('Ошибка. Нет доступа')
     }
     catch (e) {
-      res.json(e)
+      res.status(401).json('Ошибка:' + e.toString())
     }
-  },
+    },
+
   patchCart: async (req, res) => {
     try {
       await Cart.findByIdAndUpdate(req.params.id, {
@@ -49,21 +58,11 @@ module.exports.cartController = {
     }
   },
   cartToken: async (req, res) => {
+      const { auto, service, master } = req.body
+
     try {
-      const { user, auto, service, master } = req.body
-
-      const { authorization } = req.headers
-
-      const [type, token] = authorization.split(' ');
-
-      if (type !== "Bearer") {
-        return res.status(400).json('Неверный тип покена')
-      }
-
-      const payload = await jwt.verify(token, process.env.SECRET_JWT_KEY)
-
       const cart = await Cart.create({
-        user: payload.id,
+        user: req.user.id,
         auto,
         service,
         master
