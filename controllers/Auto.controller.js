@@ -14,7 +14,7 @@ module.exports.controllerAuto = {
       await Auto.create({
         name: req.body.name,
         coefficient: req.body.coefficient,
-        image: req.body.Image,
+        image: req.body.image,
       });
       res.json("Автомобиль добавлен");
     } catch (e) {
