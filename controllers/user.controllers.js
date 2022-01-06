@@ -40,14 +40,14 @@ module.exports.userController = {
       const candidate = await User.findOne({ login });
 
       if (!candidate) {
-        return res.status(401).json("Неверный логин");
+        return res.status(401).json("Неверный логин или пароль");
       }
 
       const valid = await bcrypt.compare(password, candidate.password);
 
       if (!valid) {
-        return res.status(401).json("Неверный пароль");
-      }
+        return res.status(401).json("Неверный логин или пароль");
+      } 
 
       const payload = {
         id: candidate._id,
@@ -58,7 +58,11 @@ module.exports.userController = {
         expiresIn: "24h",
       });
 
-      return res.json(`Вы авторизованы ${token}`);
+      res.json({
+        token: token
+      })
+
+      return res.json(`Вы авторизованы`);
 
     } catch (e) {
       res.json(e.message);
