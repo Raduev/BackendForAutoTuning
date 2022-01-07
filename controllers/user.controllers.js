@@ -62,8 +62,6 @@ module.exports.userController = {
         token: token
       })
 
-      return res.json(`Вы авторизованы`);
-
     } catch (e) {
       res.json(e.message);
     }
