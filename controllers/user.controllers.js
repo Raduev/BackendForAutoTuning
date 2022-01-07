@@ -13,7 +13,7 @@ module.exports.userController = {
   },
   registerUser: async (req, res) => {
     try {
-      const { login, password, firstname, lastname, number } = req.body;
+      const { login, password, firstName, lastName, number } = req.body;
 
       const hash = await bcrypt.hash(
         password,
@@ -23,8 +23,8 @@ module.exports.userController = {
       const user = await User.create({
         login: login,
         password: hash,
-        firstName: firstname,
-        lastName: lastname,
+        firstName: firstName,
+        lastName: lastName,
         number: number,
       });
 
