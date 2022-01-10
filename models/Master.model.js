@@ -9,6 +9,9 @@ const masterSchema = mongoose.Schema({
     type: Number,
     required: true,
   },
+  image: {
+    type: String,
+  },
 });
 
 const Master = mongoose.model("Master", masterSchema);
