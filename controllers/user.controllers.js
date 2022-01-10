@@ -11,6 +11,14 @@ module.exports.userController = {
       res.json(e.message);
     }
   },
+  getUserById: async (req, res) => {
+    try {
+      const user = await User.findById(req.user.id)
+      res.json(user)
+    } catch (e) {
+      res.json(e.message)
+    }
+  },
   registerUser: async (req, res) => {
     try {
       const { login, password, firstName, lastName, number } = req.body;
