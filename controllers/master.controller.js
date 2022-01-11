@@ -14,6 +14,7 @@ module.exports.masterController = {
       await Master.create({
         name: req.body.name,
         price: req.body.price,
+        image: req.body.image,
       });
       res.json("Мастер успешно добавлен");
     } catch (error) {
@@ -25,6 +26,7 @@ module.exports.masterController = {
       await Master.findByIdAndUpdate(req.params.id, {
         name: req.body.name,
         price: req.body.price,
+        image: req.body.image,
       });
       res.json("Данные мастера успешно изменены");
     } catch (error) {
