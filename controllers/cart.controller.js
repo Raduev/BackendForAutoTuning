@@ -27,11 +27,13 @@ module.exports.cartController = {
   // },
   removeCart: async (req, res) => {
     const { id } = req.params
-
+   
     try {
       const cart = await Cart.findById(id)
 
-      if (req.user.id !== cart.user) {
+      console.log( req.user);
+
+      if (req.user.id !== cart.user.toString()) {
         return res.status(401).json('Ошибка. Нет доступа')
       }
 
@@ -40,6 +42,7 @@ module.exports.cartController = {
         await cart.remove()
         return res.json('Удалено')
       }
+      
       return res.status(401).json('Ошибка. Нет доступа')
     }
     catch (e) {
