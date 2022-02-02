@@ -1,0 +1,70 @@
+header{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  position: fixed;
+  padding: 5px 20px;
+  align-items: center;
+  background-color: rgb(43, 43, 43);
+  z-index: 9999;
+  /*background-image: url("https://i.pinimg.com/originals/06/7f/ce/067fcedda7b268a86c83418720b029ee.jpg");*/
+}
+
+.logo{
+  /*min-width: 10%;*/
+  width: 250px; /* стиль для лого  */
+}
+
+.center-nav{
+  display: flex;   /*    стиль для центральной навигации     */
+  list-style: none;
+  flex: 1;
+  margin-left: 100px;
+  font-size: 110%;
+  justify-content: space-between;
+}
+.center-nav span{
+  color: white;
+  /*min-width: 40%;*/
+  width: 56%;
+  display: flex;   /*   стиль для того чтобы дать ширину центральной навигации   */
+  justify-content: space-between;
+}
+.center-nav a{
+  text-decoration: none;
+  color: white;
+  padding: 10px 0px;
+}
+.center-nav li{
+  padding: 5px 15px;
+  border-bottom: 2px solid white;
+}
+
+.center-nav a:hover{
+  color: black;
+  transition: 0.5s;
+}
+.center-nav li:hover{
+  background-color: white;
+  color: black;
+  transition: 0.5s;
+}
+
+
+.right-nav{
+  color: white; /*    стиль для центральной навигации     */
+}
+.right-nav a{
+  font-size: 23px;
+  padding: 5px 25px;
+  border: 1px solid #007eff;
+  text-decoration: none;
+  color: #007eff;
+  border-radius: 10px;
+}
+.right-nav a:hover{
+  background-color: #007eff;
+  color: white;
+  transition: 0.5s  ;
+}

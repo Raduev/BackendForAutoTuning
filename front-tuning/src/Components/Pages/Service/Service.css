@@ -1,0 +1,58 @@
+.sevice-main {
+background-color: #333;
+}
+
+.sevice-main h1 {
+    color: white;
+}
+
+.sevice_container {
+    width: 1000px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.srvice_services{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.service_image img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.service_cart {
+    margin-top: 30px;
+    width: 400px;
+    padding: 0 0 20px 0;
+    text-align: center;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px 0  #333;
+}
+
+
+.service_name {
+    margin: 10px auto 20px auto;
+    border-bottom: 1px solid black;
+    width: 300px;
+}
+
+.sevice_btn {
+ text-decoration: none;
+ padding: 5px 10px;
+ border: 1px solid  #333;
+ color:  #333;
+ border-radius: 10px;
+}
+
+.sevice_btn:hover {
+    background-color: #333;
+    color: white;
+    transition: 0.5s;
+}

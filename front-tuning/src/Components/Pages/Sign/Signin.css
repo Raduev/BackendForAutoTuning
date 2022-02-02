@@ -1,0 +1,134 @@
+.SignUpBlock {
+  text-align: center;
+  padding: 1%;
+  height: 25px;
+  align-items: center;
+}
+
+.signInBlock {
+  background-color: blue;
+}
+
+.SignInWindow {
+  opacity:0; /*Элемент полностью прозрачный (невидимый)*/
+    transition: 0.5s; /*Скорость перехода состояния элемента*/
+    animation: show 2s 1; /* Указываем название анимации, её время и количество повторов*/
+    animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+    animation-delay: 0.3s; /* Задержка перед началом */
+
+  width: 60%;
+  margin: auto;
+  /*margin-top: 7%;*/
+  padding-bottom: 2%;
+  background-color: whitesmoke;
+  color: blue;
+}
+@keyframes show{
+  0%{
+  opacity:0;
+  padding-left: 500px;
+  }
+  100% {
+  opacity:1;
+  }
+  }
+
+.empty {
+  color: red;
+}
+
+.NoEmpty {
+  color: green;
+}
+
+.SigninBlock {
+  text-align: center;
+  padding: 1%;
+  margin-top: 60px;
+  height: 25px;
+}
+
+#signInBtn {
+  margin-top: 50px;
+  width: 24.5%;
+}
+
+.Link {
+  margin-left: 2%;
+}
+
+.MainLinkBlock {
+  margin-top: 5%;
+}
+
+.getMain:hover {
+  background-color: #9f111b;
+  transition: 1s;
+  box-shadow: inset 0 0 0 23px #9f111b;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.BlockError {
+  color: red;
+}
+
+.entry {
+  width: 100%;
+}
+
+.firstNameINP {
+  border-radius: 15px;
+  border: 2px solid black;
+}
+
+.lastNameINP {
+  border-radius: 15px;
+  border: 2px solid black;
+}
+
+.numberINP {
+  border-radius: 15px;
+  border: 2px solid #000000;
+}
+
+.SignUpMain {
+  background-color: #333333;
+  width: 100%;
+  height: 675px;
+  margin: auto;
+  margin-top: 75px;
+  text-align: center;
+}
+
+.signImg {
+  width: 325px;
+  height: 400px;
+}
+
+.BlockSignImg {
+  position: absolute;
+  opacity: 0.8;
+}
+
+.textOne {
+  margin-left: 200px;
+}
+
+.error {
+  color: red;
+  opacity:0; /*Элемент полностью прозрачный (невидимый)*/
+    transition: 0.5s; /*Скорость перехода состояния элемента*/
+    animation: show 6s 1; /* Указываем название анимации, её время и количество повторов*/
+    animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+    animation-delay: 0.3s; /* Задержка перед началом */
+}
+
+.title {
+  color: black;
+}
+
+.titleBlock {
+  padding-top: 25px;
+}

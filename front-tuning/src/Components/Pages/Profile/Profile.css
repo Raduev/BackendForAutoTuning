@@ -1,0 +1,72 @@
+.mainProfile {
+    margin-top: 5.6%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar {
+    width: 20%;
+    text-align: center;
+    border-right: 1px solid black;
+    box-shadow: 1px 0px 3px 0px black;
+}
+
+.sidebar button {
+    display: block;
+    margin: 122% auto auto;
+    color: red;
+    border: 1px solid red;
+    background-color: inherit;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 2px 10px;
+}
+
+.sidebar button:hover {
+    color: white;
+    border: 1px solid red;
+    background-color: red;
+    transition: 0.5s;
+}
+
+.name {
+    display: inline;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.cart {
+    width: 80%;
+    text-align: center;
+    background-color: #333;
+    color: white;
+}
+
+.cart_card {
+    width: 700px;
+    background-color: white;
+    color: black;
+    margin: 10px auto;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+
+.cart-deleteButton {
+    margin: 10px 0 0 650px;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+.cart-deleteButton:hover {
+    color: red;
+}
+
+.cart-price {
+    box-sizing: border-box;
+    margin: 50px 0 0 480px;
+}

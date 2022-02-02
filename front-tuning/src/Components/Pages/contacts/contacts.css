@@ -1,0 +1,105 @@
+.contact {
+  width: 100%;
+  background-image: url("../../../assets/fon-company.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.contact_main {
+  width: 1000px;
+  margin: auto;
+  margin-top: 8.1%;
+  /*box-shadow: 0px 0px 20px 3px #ff3d3d;*/
+  border-radius: 8px;
+  padding: 10px;
+  background-color: white;
+  margin-bottom: 50px;
+}
+
+.contact_main_Block {
+  width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.contact_garage {
+  width: 800px;
+  margin: auto;
+}
+
+.contact_garage img {
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 8px;
+}
+
+.contact_aboutUs a {
+  margin-right: 25px;
+  text-align: center;
+}
+
+hr {
+  width: 600px;
+  border-bottom: 2px solid black;
+}
+
+iframe {
+  border: 2px solid black;
+  border-radius: 8px;
+}
+
+.contact_whatsapp {
+  /*border: 2px solid black;*/
+  box-shadow: 0px 0px 4px 0px black;
+  border-radius: 8px;
+  padding: 5px;
+  padding-left: 3px;
+  margin-bottom: 50px;
+}
+
+.contact_whatsapp span {
+  margin-right: 20px;
+}
+
+.contact_email {
+  /*border: 2px solid black;*/
+  box-shadow: 0px 0px 4px 0px black;
+  border-radius: 8px;
+  padding: 5px;
+  padding-left: 3px;
+}
+
+.contact_address {
+  /*border: 2px solid black;*/
+  box-shadow: 0px 0px 4px 0px black;
+  border-radius: 8px;
+  padding: 5px;
+  padding-left: 3px;
+}
+
+.contact_time {
+  /*border: 2px solid black;*/
+  box-shadow: 0px 0px 4px 0px black;
+  border-radius: 8px;
+  padding: 5px;
+  padding-left: 3px;
+  margin-bottom: 20px;
+}
+
+.img {
+  margin-bottom: 10px;
+}
+
+.contact_aboutUs {
+  text-align: center;
+  margin-top: 50px;
+}
+
+h3 {
+  text-align: center;
+  color: red;
+}
